@@ -1,15 +1,15 @@
 *{
     padding: 0;
-    margin: 0;
     box-sizing: border-box;
     list-style: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-/*@media screen and(max-width:673px) {
-.main-content
-    grid-template-columns:repeat(1, 1fr);
+@media screen and (min-width:674px) {
+.main-content {
+    grid-template-columns:repeat(1 ,1fr);
      
-}*/
+}}
+
 .header global-alert-offset{
     border-top: 1px;
     margin-top: 2px;
@@ -21,19 +21,15 @@
 }
 .main-content {
 min-height: 1000px;
-width: 80%;
+width: 90%;
 margin: 20px auto;
 display: grid;
-/*grid-template-columns: 300px 700px;*/
+grid-template-columns: 300px 700px;
 }
 
-section{
+.body{
     display: block;
-}
-
-body{
-    display: block;
-    background-color:rgb(247, 243, 243);
+    background-color:rgb(170, 161, 161);
 }
 /*body, p{
     font-weight: var(--artdeco-reset-typography-font-weight-normal);
@@ -48,24 +44,27 @@ body{
    
 }*/
 .left-section{
-    grid-column: span;
-    background-color: rgb(219, 223, 230);
+    grid-area: 1/1/3/2;
+    grid-column: span 1 ;
+    background-color: rgb(202, 202, 232);
 
+}
+.left-content{
+    padding: 1rem;
 }
 .right-section{
 
-    background: color #e2d8d8;;
-    grid-column: span1/ span2;
-    
-
+    grid-area: 1/2/3/3;
+    background: color #f3ebeb;;
+    grid-column: span 1 / span 2;
+    width: 90%;
 }
 .profile-image{
     display: block;
     text-align: center;
-    padding: 1rem;
     display: block;
     margin: auto;
-    border: 5px rgb(247, 238, 238) solid ;
+    border: 5px solid white;
     border-radius: 30%;
     width: 60%;
 }
@@ -113,24 +112,17 @@ body{
     padding-right:0.5rem ;
     padding-left: 0.5rem;
 }
-.skill-title{
+.social-media{
+    text-align: center;
+}
+.progress-bar{
+    border: 1px solid white;
+    height: 4px;
+}
+.skill-name{
     font-size: 0.65rem;
     font-weight: 0.65rem;
     text-align: left;
     padding-bottom: 0.5rem;
-}
-.progress-bar{
-    border: 1px solid rgb(15, 14, 14) ;
-    height: 4px;
 
-}
-.right-title{
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    font-weight: 700;
-    padding: 0.5rem;
-    letter-spacing: 1px;
-}
-.social-media{
-    text-align: center;
 }
